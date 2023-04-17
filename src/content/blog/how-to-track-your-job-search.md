@@ -1,23 +1,22 @@
 ---
 title: How to Track Your Job Search
 tags:
-- interviewing
+  - interviewing
 pubDatetime: 2021-01-07T22:40:32.169Z
-description: 
-  Feel productive, organized, and confident in your next job search
+description: Feel productive, organized, and confident in your next job search
 ---
 
 Okay, you have decided to start looking for a new job.
 
 Admittedly, this is a process that people are not too fond of, generally speaking.
 
-While I am pretty certain that I can not convince you to thoroughly *enjoy* the job searching process, I can share a method I have used multiple times in my previous job searches that has made the process feel much more *organized* and *productive*. 
+While I am pretty certain that I can not convince you to thoroughly _enjoy_ the job searching process, I can share a method I have used multiple times in my previous job searches that has made the process feel much more _organized_ and _productive_.
 
 It all starts with a spreadsheet.
 
 ### Create a ledger of your progress
 
-First, create a new spreadsheet and title it *My Job Search Journey*.
+First, create a new spreadsheet and title it _My Job Search Journey_.
 
 Next, I suggest you create six-column headers:
 
@@ -31,14 +30,13 @@ No one wants to start an interview and completely space the name of the company 
 
 If you are applying to multiple companies and positions, things can get jumbled up pretty easily.
 
-There are so many different titles in the modern tech landscape. 
+There are so many different titles in the modern tech landscape.
 
 You want to make sure that you remain mindful of each position you are applying for now, so you can easily recall this prior to an interview at this company.
 
-
 #### Link to Job
 
-Eventually, you are going to attract interest from a company you apply to, awesome! 
+Eventually, you are going to attract interest from a company you apply to, awesome!
 
 At first, you are excited, and then suddenly a wave of anxiety falls over you.
 
@@ -62,7 +60,7 @@ That alone is hard work and you should be proud of that!
 
 - It can offer insight into how long a standard interview process can go
 
-In my post, [How to Prepare for a Software Developer Interview](https://www.martincartledge.io/prepare-for-software-developer-interview/), I explain the steps of the interview process.
+In my post, [How to Prepare for a Software Developer Interview](https://www.martincartledge.io/posts/how-to-prepare-for-a-software-developer-interview), I explain the steps of the interview process.
 
 This process can vary depending on the position and company, but being able to look back at an initial date through where you are currently at with a company can be another rewarding metric.
 
@@ -70,39 +68,37 @@ The interview process can be long and taxing, however, as each day moves past yo
 
 Be proud of that!
 
-
 #### Application Status
 
 After several applications paired with several interviews all at different stages, things can get really difficult to keep straight in between the ears.
 
-This is where the *Application Status* column can really help.
+This is where the _Application Status_ column can really help.
 
-If a company reaches out to you to schedule an interview, start keeping track of the date, time, and type of interview each step along the way. 
+If a company reaches out to you to schedule an interview, start keeping track of the date, time, and type of interview each step along the way.
 
 This can help keep awareness high for your immediate priorities, as well as a good way to avoid double-booking interviews for yourself.
 
 I also suggest keeping track of applications that you were rejected from in this column.
 
-By keeping track of your successes as well as your failures in the job search, you make it easier to examine your *success rate*.
+By keeping track of your successes as well as your failures in the job search, you make it easier to examine your _success rate_.
 
 If you find that out of one hundred companies, you are only getting five replies, it might be time to examine the things you have control over, your resume and, if you have one, your cover letter.
 
 All-in-all, having these data points really helps you solidify the cause of why you are or are not getting the results you want in your job search.
 
-
 #### Notes
 
 Even if you are applying to jobs full-time, it can be really difficult to keep details of each job you have an interest in straight.
 
-The last column, *Notes*, is essentially a placeholder for miscellaneous thoughts that you have about the company, position, or interview process.
+The last column, _Notes_, is essentially a placeholder for miscellaneous thoughts that you have about the company, position, or interview process.
 
-This is also a great place to write reminders for whichever step of the interview you are in. 
+This is also a great place to write reminders for whichever step of the interview you are in.
 
-i.e. *Company ethos: Think of the end-user at all costs. Mention user acceptance meeting experience!*
+i.e. _Company ethos: Think of the end-user at all costs. Mention user acceptance meeting experience!_
 
 If you spend a little bit of time to jot down a few notes that you think would be helpful during an interview process for a company, they usually go a long way for you and help you stand out more as a candidate.
 
-More thorough preparation and thoughtful questions or experiences you discuss will always bode more favorable to the interviewer, it shows you have a *genuine* interest in the position/company.
+More thorough preparation and thoughtful questions or experiences you discuss will always bode more favorable to the interviewer, it shows you have a _genuine_ interest in the position/company.
 
 ### The Final Product
 
@@ -116,5 +112,4 @@ If you have put in the time and landed interviews, congrats! I wish you all the 
 
 If you are just beginning the job search process, good luck! You got this.
 
-New to software development and trying to land an interview? Take a look at my post on [Getting an Interview as a Software Developer](https://www.martincartledge.io/get-software-developer-interview/).
-
+New to software development and trying to land an interview? Take a look at my post on [Getting an Interview as a Software Developer](https://www.martincartledge.io/posts/how-to-get-an-interview-as-a-software-developer).

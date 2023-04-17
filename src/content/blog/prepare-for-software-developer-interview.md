@@ -1,13 +1,12 @@
 ---
 title: How to Prepare for a Software Developer Interview
 tags:
-- interviewing
+  - interviewing
 pubDatetime: 2020-12-07T22:40:32.169Z
-description: 
-  Interview Insights Pt 2 - Preparing for the Interview
+description: Interview Insights Pt 2 - Preparing for the Interview
 ---
 
-In my last article, I shared my thoughts on [how to get an interview as a software developer](https://www.martincartledge.io/get-software-developer-interview/). This week, I will share my thoughts on how you should prepare for that interview once you get it.
+In my last article, I shared my thoughts on [how to get an interview as a software developer](https://www.martincartledge.io/posts/how-to-get-an-interview-as-a-software-developer). This week, I will share my thoughts on how you should prepare for that interview once you get it.
 
 Tech interviews are notoriously nerve-racking and unpredictable. But there are steps you can take to mitigate a lot of these feelings.
 

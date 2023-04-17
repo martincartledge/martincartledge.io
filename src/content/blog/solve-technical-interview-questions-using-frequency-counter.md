@@ -1,13 +1,12 @@
 ---
 title: Problem Solving Patterns for Technical Interviews - the Frequency Counter Pattern Explained
 tags:
-- interviewing
+  - interviewing
 pubDatetime: 2020-12-21T22:40:32.169Z
-description: 
-  Interview Insights Pt 3 - Problem Solving Patterns - Frequency Counter
+description: Interview Insights Pt 3 - Problem Solving Patterns - Frequency Counter
 ---
 
-In my last article, I shared my thoughts on [prepare for a software developer interview](https://www.martincartledge.io/prepare-for-software-developer-interview/).
+In my last article, I shared my thoughts on [prepare for a software developer interview](hhttps://www.martincartledge.io/posts/how-to-prepare-for-a-software-developer-interview).
 
 In this article, I am going to switch gears a bit and talk about common patterns you can use to solve problems in technical interviews. We'll discuss the _frequency counter_ pattern in depth to help you tackle it effectively.
 

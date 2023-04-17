@@ -8,11 +8,10 @@ tags:
   - data structures
   - javascript
 ogImage: ""
-description:
-  Data Structures and Algorithms using JavaScript - Arrays
+description: Data Structures and Algorithms using JavaScript - Arrays
 ---
 
-This is the second post in my series _Data Structures and Algorithms using JavaScript_. Last week, I discussed [_Time Complexity, Space Complexity, and Big O Notation_](https://www.martincartledge.io/time-complexity-Space-complexity-and-big-o-notation/). This week I am going to talk about a very popular data structure that most programmers use on a daily basis, the _Array_. In this post, I will cover the Big O of common `Array` actions (`push`, `pop`, etc) and we will also walk through the process of creating our very own _Array_ data structure! Let's get started.
+This is the second post in my series _Data Structures and Algorithms using JavaScript_. Last week, I discussed [_Time Complexity, Space Complexity, and Big O Notation_](https://www.martincartledge.io/posts/time-complexity-space-complexity-and-big-o-notation). This week I am going to talk about a very popular data structure that most programmers use on a daily basis, the _Array_. In this post, I will cover the Big O of common `Array` actions (`push`, `pop`, etc) and we will also walk through the process of creating our very own _Array_ data structure! Let's get started.
 
 ## What is an Array?
 

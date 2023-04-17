@@ -1,10 +1,9 @@
 ---
 title: Year in Review
 tags:
-- reflection
+  - reflection
 pubDatetime: 2020-12-31T22:40:32.169Z
-description:
-  Reflecting on the good and the bad of 2020
+description: Reflecting on the good and the bad of 2020
 ---
 
 For most, 2020 has been one of the most challenging years in their life.
@@ -43,7 +42,7 @@ This year, I watched the [Vans video "Alright, Ok"](https://www.youtube.com/watc
 
 ## Books I enjoyed the most
 
-2020 was the year that [I fell in love with reading](https://www.martincartledge.io/book-list-2021/). For those moments in time, I forgot about the world we live in and focused solely on the new world I was apart of.
+2020 was the year that I fell in love with reading. For those moments in time, I forgot about the world we live in and focused solely on the new world I was apart of.
 
 My three favorite books of 2020:
 

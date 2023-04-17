@@ -8,11 +8,10 @@ tags:
   - go
   - concurrency
 ogImage: ""
-description: 
-  Learning Go Week 11 - Goroutines and WaitGroups
+description: Learning Go Week 11 - Goroutines and WaitGroups
 ---
 
-This is the eleventh entry of my weekly series _Learning Go_. Last week I talked about [Sorting Data in Go](https://www.martincartledge.io/sorting-data-in-go/). This week I will be talking about how Concurrency works in Go. Before I really dive into the topic of Concurrency, I feel that I need to make some differences between Concurrency and Parallelism since they often times are confused with each other. I will also explain a few pieces of the Go language that allows us to use Concurrency. These pieces are Go Routines and Go Statements.
+This is the eleventh entry of my weekly series _Learning Go_. Last week I talked about [Sorting Data in Go](https://www.martincartledge.io/posts/sorting-data-in-go). This week I will be talking about how Concurrency works in Go. Before I really dive into the topic of Concurrency, I feel that I need to make some differences between Concurrency and Parallelism since they often times are confused with each other. I will also explain a few pieces of the Go language that allows us to use Concurrency. These pieces are Go Routines and Go Statements.
 
 ## Concurrency vs. Parallelism
 
