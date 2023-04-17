@@ -4,7 +4,7 @@ author: Sat Naing
 pubDatetime: 2022-09-21T05:17:19Z
 postSlug: how-to-connect-astro-paper-blog-with-forestry-cms
 featured: false
-draft: false
+draft: true
 tags:
   - docs
   - forestry-cms
@@ -95,7 +95,7 @@ Then, click "Add Template" button at the top right corner.
 
 Select new template based on existing document.
 
-![Creating new template based on existing document](https://res.cloudinary.com/noezectz/v1663742179/astro-paper/forestry-io-existing-doc_bwcb9q.png)
+![Creating new tamplate based on existing document](https://res.cloudinary.com/noezectz/v1663742179/astro-paper/forestry-io-existing-doc_bwcb9q.png)
 
 Then, add template name and choose one of my document page as template.
 

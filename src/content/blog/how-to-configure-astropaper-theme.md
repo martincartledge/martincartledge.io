@@ -3,8 +3,8 @@ author: Sat Naing
 pubDatetime: 2022-09-23T04:58:53Z
 title: How to configure AstroPaper theme
 postSlug: how-to-configure-astropaper-theme
-featured: true
-draft: false
+featured: false
+draft: true
 tags:
   - configuration
   - docs
@@ -18,9 +18,9 @@ AstroPaper is a highly customizable Astro blog theme. With AstroPaper, you can c
 
 ## Configuring SITE
 
-The important configurations lies in `src/config.ts` file. Within that file, you'll see the `SITE` object where you can specify your website's main configurations.
+First of all, replace site property of _`astro.config.mjs` file with your own deployed domain. (You can omit this step if you don't have deployed domain yet or you are still in development mode)_
 
-During deveopment, it's okay to leave `SITE.website` empty. But in production mode, you should specify your deployed url in `SITE.website` option since this will be used for canonical URL, social card URL etc.. which are important for SEO.
+Another important configurations lies in `src/config.ts` file. Within that file, you'll see the `SITE` object where you can specify your website's main configurations.
 
 ```js
 // file: src/config.ts
