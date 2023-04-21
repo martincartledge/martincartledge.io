@@ -1,10 +1,10 @@
 ---
 title: Intro to Distributed Systems
+ogImage: https://i.imgur.com/GC3eWj5.png
 tags:
   - distributed systems
 pubDatetime: 2022-04-21T10:00:00.169Z
 featured: true
-ogImage: "public/assets/posts/intro-to-distributed-ogimage.png"
 description: Computing, Concurrency, Fault Tolerance, oh my!
 ---
 
