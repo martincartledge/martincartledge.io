@@ -1,13 +1,13 @@
 import type { SocialObjects } from "./types";
 
 export const SITE = {
-  website: "https://martincartledge.io",
+  website: "https://martincartledge.io/",
   author: "Martin Cartledge",
   desc: "Personal technical blog",
   title: "Martin Cartledge",
   ogImage: "me.png",
   lightAndDarkMode: true,
-  postsPerPage: 10,
+  postPerPage: 10,
 };
 
 export const LOGO_IMAGE = {
