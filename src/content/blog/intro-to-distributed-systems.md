@@ -61,7 +61,7 @@ When you have more machines available, you can conduct more operations at the sa
 
 #### Fault Tolerance
 
-One certainty of systems and technology is that they _will_ fail. What happens when one of your machines fails? Does your data corrupt and vanish into thin air? This is where _Fault Tolerance_ come in.
+One certainty of systems and technology is that they _will_ fail. What happens when one of your machines fails? Does your data corrupt and vanish into thin air? This is where _Fault Tolerance_ comes in.
 
 Fault Tolerance allows you the flexibility for your systems to respond in a productive manner when a machine fails in your system. Continuous operation is its bread and butter. 🍞
 
