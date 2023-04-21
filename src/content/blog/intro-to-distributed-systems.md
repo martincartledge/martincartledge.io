@@ -4,7 +4,7 @@ tags:
   - distributed systems
 pubDatetime: 2022-04-21T10:00:00.169Z
 featured: true
-ogImage: "public/assets/posts/intro-to-distributed-ogimage.jpeg"
+ogImage: "public/assets/posts/intro-to-distributed-ogimage.png"
 description: Computing, Concurrency, Fault Tolerance, oh my!
 ---
 
