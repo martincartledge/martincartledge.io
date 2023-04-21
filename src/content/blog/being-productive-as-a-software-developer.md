@@ -2,13 +2,12 @@
 author: Martin Cartledge
 pubDatetime: 2021-01-05T22:40:32.169Z
 title: Being Productive as a Software Developer
-featured: true
+featured: false
 draft: false
 tags:
   - productivity
 ogImage: ""
-description:
-  Full calendars, endless chat notifications, and other interruptions. When does work get done?
+description: Full calendars, endless chat notifications, and other interruptions. When does work get done?
 ---
 
 In the modern-day, it is increasingly difficult to find a lengthy period of time without distractions.
@@ -19,9 +18,9 @@ Now, if you manage to escape one of the common distractions mentioned above, the
 
 Meetings.
 
-Let me clarify, *unnecessary* meetings.
+Let me clarify, _unnecessary_ meetings.
 
-For many, having a calendar full of meetings has become the norm, we are forced to cram any amount of *real* work we can in between these blocks of time.
+For many, having a calendar full of meetings has become the norm, we are forced to cram any amount of _real_ work we can in between these blocks of time.
 
 I believe there is a way to combat these distractions in a responsible, professional way.
 
@@ -29,33 +28,33 @@ I believe there is a way to combat these distractions in a responsible, professi
 
 Sadly, a lot of folks feel they do not have control over how their schedule pans out day-to-day.
 
-The default action taken when a question is raised in an email or a chat application is, *Let's schedule a meeting!*
+The default action taken when a question is raised in an email or a chat application is, _Let's schedule a meeting!_
 
-Next thing you know, you have a meeting request in your inbox, at a time when most of the group is *available*.
+Next thing you know, you have a meeting request in your inbox, at a time when most of the group is _available_.
 
 The trouble here is not the meeting itself, but the side-effects that this meeting will administer.
 
 ### Focus time, what's that?
 
-When meetings are sporadically wedged into your day, it becomes increasingly difficult to be able to *focus* on a single task for a lengthy period of time.
+When meetings are sporadically wedged into your day, it becomes increasingly difficult to be able to _focus_ on a single task for a lengthy period of time.
 
-This *length* looks different for everyone, of course. The point being, more meetings are not always a sign of productivity, they can quickly become a hindrance that stifles productivity on both an individual contributor level and team level.
+This _length_ looks different for everyone, of course. The point being, more meetings are not always a sign of productivity, they can quickly become a hindrance that stifles productivity on both an individual contributor level and team level.
 
 Our brains work better when we can focus solely on one task at a time. But it does not stop there, our overall performance, and (mental) health is better too.
 
-Accomplishing a task just feels really good. 
+Accomplishing a task just feels really good.
 
 ### Fewer meetings, more focus
 
-Admittedly, not everyone has the luxury of simply telling our boss: *I do not want to go to this meeting*, that would probably not go over well.
+Admittedly, not everyone has the luxury of simply telling our boss: _I do not want to go to this meeting_, that would probably not go over well.
 
-My suggestion is to block out periods of time every day in your calendar to deliberately claim sessions of *focused* work.
+My suggestion is to block out periods of time every day in your calendar to deliberately claim sessions of _focused_ work.
 
 These periods can be anywhere from 30 minutes to 2 hours. I suggest picking a long enough time to ensure you can get into the proper mental headspace, without shutting yourself off from your team.
 
-This, of course, is not a silver bullet to meetings. That is not the point. 
+This, of course, is not a silver bullet to meetings. That is not the point.
 
-The primary goal is to take back some control over what your work week looks like. 
+The primary goal is to take back some control over what your work week looks like.
 
 To focus more on the tasks at hand, instead of trying to regain focus after a slew of 30-60+ minute meetings.
 
@@ -63,11 +62,11 @@ There is another rival that wants to soak up our bandwidth and time as well. Not
 
 ### Did you get my (email, chat, call)?
 
-Escaping what I call *notification hell* is not an easy task, especially in a remote-first world that many of us were thrown into in 2020.
+Escaping what I call _notification hell_ is not an easy task, especially in a remote-first world that many of us were thrown into in 2020.
 
-And who can blame us? We see a message, we want to read it. We see that red badge in the corner of the screen and our brain tells us *you want to see what that is about!*
+And who can blame us? We see a message, we want to read it. We see that red badge in the corner of the screen and our brain tells us _you want to see what that is about!_
 
-The way I handle this is fairly straightforward, but before I discuss that I have to mention the *Pomodoro Technique*. 
+The way I handle this is fairly straightforward, but before I discuss that I have to mention the _Pomodoro Technique_.
 
 ### Ingredients for better focus: a timer and "Do Not Disturb" mode
 

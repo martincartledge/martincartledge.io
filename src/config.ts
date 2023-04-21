@@ -7,6 +7,7 @@ export const SITE = {
   title: "Martin Cartledge",
   ogImage: "me.png",
   lightAndDarkMode: true,
+  postsPerPage: 10,
 };
 
 export const LOGO_IMAGE = {
