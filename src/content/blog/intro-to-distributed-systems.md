@@ -8,6 +8,8 @@ ogImage: "public/assets/posts/intro-to-distributed-ogimage.png"
 description: Computing, Concurrency, Fault Tolerance, oh my!
 ---
 
+![intro-to-distributed-systems-post-photo](https://i.imgur.com/GC3eWj5.png)
+
 🪴 _This is a living post, and will likely be updated periodically_
 
 Hello! It's been a while, so first and foremost, thank you for being here and for taking the time to read this!
