@@ -30,18 +30,16 @@ MapReduce was created with the goal of processing hundreds of terabytes of data 
 
 The manner in which it performs this processing is split into two actions, you guessed it, mapping and reducing.
 
-To use:
+A map operation is performed on each _logical_ record derived from the input, a set of key/value pairs are composed, then a reduce operation is applied to _all_ values that _share the same key_.
 
-A user specifies a map function:
+When broken down into steps:
 
-- Processes a key/value pair
-- Which generates a set of intermediate values associated with the same key
-
-And a reduce function:
-
-- merges all values associated with the same key
-
-- Automatically parallelized and executed on a large cluster of commodity machines
+- A user specifies a `map` function:
+  - Processes a key/value pair
+  - A set of intermediate values associated with the same key is generated
+- A user specifies a `reduce` function:
+  - All values associated with the same key are merged
+  - This operation is automatically parallelized and executed on a large cluster of commodity machines
 
 The run time system handles:
 
@@ -59,5 +57,24 @@ The computation takes a set of input key/value pairs and returns a set out outpu
 MapReduce library is written in C++
 
 ## How Does MapReduce Work
+
+There are many different ways to implement MapReduce, but for simplicity sake, I will provide an overview similiar to what Jeffrey Dean and Sanjay Ghemawat cited in their [MapReduce paper](https://research.google/pubs/pub62/).
+
+- Large clusters are connected via Ethernet
+- Each machine is equipped with dual-processor x86 processors
+  - OS: Linux
+  - Between 2-4 GB of memory per machine
+- Commodity networking hardware is used
+  - 100 megabits per second
+  - 1 gigabit per second at the machine level
+- Clusters consist of hundreds/thousands of machines
+  - Failures are common
+- Storage is handled in two primary methods
+  - IDE disks attached to each machine
+  - A distributed file system (GFS) that manages the data stored on the machine's disks
+  - GFS uses replication to ensure data availability amidst unreliable hardware
+- A user submits jobs to a scheduling system
+  - Within each job are sets of tasks
+  - These tasks are mapped by the scheduler to available machines within the cluster
 
 ## Why use MapReduce
