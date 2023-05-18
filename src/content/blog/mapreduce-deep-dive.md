@@ -77,4 +77,48 @@ There are many different ways to implement MapReduce, but for simplicity sake, I
   - Within each job are sets of tasks
   - These tasks are mapped by the scheduler to available machines within the cluster
 
-## Why use MapReduce
+## Implementation
+
+Now we know _what_ it looks like to implement MapReduce, but what happens when MapReduce is used? Next, I will describe the execution phase.
+
+### Execution
+
+- Input files are split into M (map) pieces, typically 16/64 megabytes
+  - The split size is controllable via parameter
+- Several copies of the program are spun up on a cluster of dedicated machines
+- There is one `master` copy, this copy assigns idle works M (map) and R (reduce) tasks
+- If a worker is assigned a M (map) task, it will read the contents of the corresponding input split
+  - This worker parses key/value pairs of the input and passes each key/value pair to the user-defined Map function
+  - Intermediate key/value pairs produced are buffered in memory
+- Buffered pairs are written to local disk periodically and are partitioned into R (reduce) regions
+  - The locations of the buffered pairs on local disk are passed back to the `master` worker who takes care of sending these locations to the R (reduce) workers
+- When a R (reduce) worker is notified by the `master` worker of these new locations, Remote Procedure Calls (RPC) to read the buffered data from the local disks of the M (map) workers
+- After the R (reduce) worker has read all data, keys are sorted so that occurences with the same key are grouped together
+  - In cases where the data is too large, in-memory sort is not used, but rather an external sort function
+- The R (reduce) worker iterates through the sorted data and passes a key and set of values to the user supplied reduce function
+- Once the map and reduce tasks are complete, the `MapReduce` call returns back to the user code
+- The output of the `MapReduce` execution can be found in the R (reduce) output files, one file per task
+
+### `master` data structures
+
+### Fault tolerance
+
+#### Worker failure
+
+### Locality
+
+### Task granularity
+
+## Refinements
+
+### Skipping bad records
+
+### Local execution
+
+### Status information
+
+### Counters
+
+## Experience
+
+## Conclusions
