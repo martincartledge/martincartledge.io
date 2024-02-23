@@ -3,6 +3,7 @@ title: How To Stop Procrastinating and Do Hard Things
 tags:
   - personal development
 pubDatetime: 2024-02-23T10:40:32.169Z
+featured: true
 description: The first step is the hardest
 ---
 
