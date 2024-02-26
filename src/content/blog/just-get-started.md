@@ -7,6 +7,8 @@ featured: true
 description: The first step is the hardest
 ---
 
+![desk](https://i.imgur.com/9c5f5f5.jpg)
+
 ### It only takes 25 minutes.
 
 This _is not_ just another pomodoro blog post, but rather a simple way that I have been trying to break down development tasks and make better use of my time.
