@@ -7,7 +7,7 @@ featured: true
 description: The first step is the hardest
 ---
 
-![desk](https://i.imgur.com/9c5f5f5.jpg)
+![desk](https://i.imgur.com/y6Od4tZ.jpg)
 
 ### It only takes 25 minutes.
 
