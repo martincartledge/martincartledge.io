@@ -18,12 +18,12 @@ Things begin to get a bit abstract if we do not know each step in a sequenece to
 I think it will be helpful to split two types of the AI we might see or hear about. Weak AI is designed to perform a narrow task, such as facial recognition. Strong AI is designed to perform any intellectual task that a human can do.
 
 Weak AI is far more common in our normal day to day. Some common examples include:
+
 - Siri
 - Spotify recommendations
 - Customer service chat bots
 
 Strong AI can be thought of as a goal that the AI industry is striving towards. A strong AI could reason, understand, and learn just like a human could.
-
 
 ## Intellgence
 
@@ -43,4 +43,23 @@ There are two ways to approach this problem:
 
 1. **Top-down Approach: Symbolic Reasoning**:
 
+- Try to model our reasoning process
+- We follow thoughts when we reason, try to formalize this process for a computer
+- Knowledge representation and reasoning are the two main components
+
+Imagine you go see a doctor, and they discover that you have a fever. Once they know this, they know that inflammation is a possible cause. By reaching this conclusion, the doctor applied a large set of rules to a certain behavior that helped them reach a decision.
+
 2 **Bottom-up Approach: Neural Networks**:
+
+- Model off of a simple element found in the human brain, a neuron
+- By constructing an artificial neural network in a computer, we can teach the computer to solve problems by giving examples for those problems and solutions
+
+A way to think about this process is how you would go about teaching a newborn baby things. A lot of this learning is done oberservationally; inadverantly being shown how to do things.
+
+## History
+
+Artificial Intelligence may seem like a newer idea and it more in vogue than ever before, however, its origin dates back almost 70 years. The term was first coined by John McCarthy in 1956. Back then, Top Down, or Symbolic Reasoning was the predominant approach, as many successes stemmed from creating expert systems (computers that acted as an expert in a particular field with problem domains). This system did not scale well though due to the fact that feeding these models updated data from experts in a field was quite cumbersome and clunky. Because of this, advancements in AI slowed quite a bit and ultimately led to what is commonly referred to as the "AI Winter" in the 70s.
+
+As the technology advanced over the course of a few decades, computer resources continually got cheaper. Data became more regularly accessible as well, which helped stoke to fire of the neural network effort. Due to cheaper resources and greater data availability, neural networks began to advance much more rapidly, most often showcasing their ability to understand human speech and behavior.
+
+In modern day, neural networks is used as a interchangeable term for AI because many of the AI successes you see or hear about, are based on them.
