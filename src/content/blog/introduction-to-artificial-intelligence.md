@@ -36,7 +36,7 @@ What does intelligence mean to you? Critical or abstract thought? Superior aware
 
 The irony is that the definition of Intelligence is a bit of a mystery itself. It’s hard to find a definition that can be set as a standard. No standardized test or metric system can be used to measure or quantify this concept in humans or any living organism.
 
-Alan Turing created a way to potentially measure intelligence. His test involved having a human judge a conversation between a human and a machine. The machine was considered intelligent if the judge could not tell the difference between the two.
+Alan Turing created a way to potentially measure intelligence. [His test](https://en.wikipedia.org/wiki/Turing_test) involved having a human judge a conversation between a human and a machine. The machine was considered intelligent if the judge could not tell the difference between the two.
 
 ## Thinking human
 
@@ -63,7 +63,7 @@ A way to think about this process is to imagine how you would teach a newborn ba
 
 ## History
 
-Artificial Intelligence may seem like a newer idea, and it is more in vogue than ever; however, its origin dates back almost 70 years. The term was first coined by John McCarthy in 1956. Back then, Top Down, or Symbolic Reasoning, was the predominant approach, as many successes stemmed from creating expert systems (computers that acted as experts in a particular field with problem domains). However, this system did not scale well because feeding these models updated data from experts in a field was quite cumbersome and clunky. Because of this, advancements in AI slowed quite a bit and ultimately led to what is commonly referred to as the "AI Winter" in the 70s.
+Artificial Intelligence may seem like a newer idea, and it is more in vogue than ever; however, its origin dates back almost 70 years. The term was first coined by John McCarthy in 1956. Back then, Top Down, or Symbolic Reasoning, was the predominant approach, as many successes stemmed from creating expert systems (computers that acted as experts in a particular field with problem domains). However, this system did not scale well because feeding these models updated data from experts in a field was quite cumbersome and clunky. Because of this, advancements in AI slowed quite a bit and ultimately led to what is commonly referred to as the "[AI Winter](https://en.wikipedia.org/wiki/AI_winter)" in the 70s.
 
 As technology advanced over a few decades, computer resources continually got cheaper. Data also became more regularly accessible, which helped stoke the fire of the neural network effort. Due to cheaper resources and greater data availability, neural networks began to advance rapidly, most often showcasing their ability to understand human speech and behavior.
 
@@ -71,13 +71,13 @@ In the modern-day, neural networks are used as an interchangeable term for AI be
 
 To illustrate how past approaches evolved, we can look at a search algorithm that was developed to assist with playing chess.
 
-This was based on search; the program estimated the moves that its opponent could take, taking into account the number of next moves. Once it conducted this search, it picked what it considered to be the optimal move based on the best position that could be achieved in a few moves. This program led to the alpha-beta pruning algorithm.
+This was based on search; the program estimated the moves that its opponent could take, taking into account the number of next moves. Once it conducted this search, it picked what it considered to be the optimal move based on the best position that could be achieved in a few moves. This program led to the [alpha-beta pruning](https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning) algorithm.
 
 This approach performed better near the end of a chess match; however, when the chess canvas is larger, there is room to improve this algorithm by incorporating the learnings from human players.
 
-As these experiments evolved, a method called base-based reasoning was employed. This directed the program to look for similar cases between the current games and past games that had been played.
+As these experiments evolved, a method called [case-based reasoning](https://en.wikipedia.org/wiki/Case-based_reasoning) was employed. This directed the program to look for similar cases between the current games and past games that had been played.
 
-If you played an AI in chess today and it beat you, chances are it beat you because neural networks and reinforcement learning are used. Now, programs can improve their game by playing themselves continually and, in turn, learning from their own mistakes.
+If you played an AI in chess today and it beat you, chances are it beat you because neural networks and [reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning) are used. Now, programs can improve their game by playing themselves continually and, in turn, learning from their own mistakes.
 
 Our modern-day speech AI assistants, such as Alexa or Siri, use hybrid systems composed of neural networks that transform our speech into text, attempt to diagnose our intent, and then execute reasoning or specific algorithms to perform the action we are asking for.
 
