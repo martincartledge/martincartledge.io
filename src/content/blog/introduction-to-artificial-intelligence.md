@@ -33,7 +33,7 @@ Weak AI is far more common in our normal day-to-day. Some common examples includ
 
 Strong AI is a goal that the AI industry is striving towards. A strong AI could reason, understand, and learn just like a human.
 
-## Intellgence
+## Intelligence
 
 What does intelligence mean to you? Critical or abstract thought? Superior awareness about yourself or the world around you? The ability to learn and adapt?
 
