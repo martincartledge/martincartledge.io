@@ -1,13 +1,18 @@
 ---
 title: Introduction to Artificial Intelligence
-ogImage: https://i.imgur.com/GC3eWj5.png
+ogImage: https://i.imgur.com/5r8Wuc2.jpg
 tags:
   - artificial intelligence
-pubDatetime: 2024-07-01T10:00:00.169Z
-featured: false
-draft: true
+pubDatetime: 2024-06-27T09:18:00.169Z
+featured: true
 description: Learning Artificial Intelligence - Week 1
 ---
+
+Hello 👋! Welcome to the first entry of my weekly series _Learning Artificial Intelligence_.
+
+I am excited to start this journey and share what I learn with you. This week we will be covering the basics of Artificial Intelligence (AI). Let's dive in!
+
+## The Beginning
 
 Computers were invented by Charles Baggage to perform defined procedures or algorithms. External factors in technology have changed, but computers’ basic principles and utility remain the same.
 
