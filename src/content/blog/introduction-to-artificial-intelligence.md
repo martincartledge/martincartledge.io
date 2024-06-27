@@ -1,9 +1,10 @@
 ---
+author: Martin Cartledge
+pubDatetime: 2024-06-27T09:18:00.169Z
 title: Introduction to Artificial Intelligence
-ogImage: https://i.imgur.com/5r8Wuc2.jpg
+ogImage: "https://i.imgur.com/5r8Wuc2.jpg"
 tags:
   - artificial intelligence
-pubDatetime: 2024-06-27T09:18:00.169Z
 featured: true
 description: Learning Artificial Intelligence - Week 1
 ---
