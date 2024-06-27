@@ -8,6 +8,8 @@ featured: true
 description: Learning Artificial Intelligence - Week 1
 ---
 
+![intro-to-artificial-intelligence-post-photo](https://i.imgur.com/5r8Wuc2.jpg)
+
 Hello 👋! Welcome to the first entry of my weekly series _Learning Artificial Intelligence_.
 
 I am excited to start this journey and share what I learn with you. This week we will be covering the basics of Artificial Intelligence (AI). Let's dive in!
