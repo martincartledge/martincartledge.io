@@ -32,3 +32,31 @@ There are four pillars that illustrate the relationship between knowledge and in
 - **Wisdom**: Knowledge that has been applied
 
 This pyramid and illustrative concept is called the [DIKW pyramid](https://en.wikipedia.org/wiki/DIKW_pyramid).
+
+The problem that Knowledge Representation attempts to solve is how to represent knowledge in a way that a computer can understand and in a way that the data stored can be automatically useable. The two extremes of this problem being: algorithms that are used by a computer, and human natural language that we use every day.
+
+Algorithms can be interpreted and run by a computer, but are not as easily understood by humans. Natural language is of course easily understood by humans, however, it is not as easily deciphered by a computer.
+
+## Computer Representation of Knowledge
+
+There are a number of ways that knowledge can be represented in a computer:
+
+### Network Representation
+
+### Object-Attribute-Value or Attribute-Value Representation
+
+### Hierarchical Representation
+
+#### Frame representation
+
+### Procedural Representation
+
+### Logic Representation
+
+## Expert Systems
+
+### Forward vs Backward Inference
+
+#### Implementing Expert Systems
+
+## Ontologies and the Semantic Web
