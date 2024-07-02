@@ -6,7 +6,7 @@ ogImage: "https://i.imgur.com/JOE5VfU.jpg"
 tags:
   - artificial intelligence
 featured: false
-draft: false
+draft: true
 description: Learning Artificial Intelligence - Week 2
 ---
 
