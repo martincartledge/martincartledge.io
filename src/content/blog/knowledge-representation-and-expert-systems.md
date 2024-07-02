@@ -6,7 +6,7 @@ ogImage: "https://i.imgur.com/JOE5VfU.jpg"
 tags:
   - artificial intelligence
 featured: false
-draft: true
+draft: false
 description: Learning Artificial Intelligence - Week 2
 ---
 
@@ -43,7 +43,21 @@ There are a number of ways that knowledge can be represented in a computer:
 
 ### Network Representation
 
-### Object-Attribute-Value or Attribute-Value Representation
+This representation is based on how we think about concepts or information in our own mind. These related pieces of information form a network in our brains.
+
+When this is replicated for a computer, the networks we form in our brain can be represented as a graph in a computer. These are also referred to as _Semantic Networks_
+
+### Object-Attribute-Value Triplets or Attribute-Value Pairs
+
+Before we go any further, take a look at this example:
+
+| Object | Attribute | Value |
+| ------ | --------- | ----- |
+| Anakin | Father    | Luke  |
+
+If you take a few seconds, you can probably determine the relationship between these three pieces of information. This is called an _Object-Attribute-Value triplet_.
+
+Taking a step back, imagine this data in the form of a graph structure. A node (object) of the graph would represent _Anakin_. This node would have an edge, _Father_ that would point to another node, _Luke_. Let's see that visually as well:
 
 ### Hierarchical Representation
 
