@@ -59,13 +59,45 @@ If you take a few seconds, you can probably determine the relationship between t
 
 Taking a step back, imagine this data in the form of a graph structure. A node (object) of the graph would represent _Anakin_. This node would have an edge, _Father_ that would point to another node, _Luke_. Let's see that visually as well:
 
+TODO: Add diagram
+
 ### Hierarchical Representation
+
+Humans have a tendency of grouping similar information together. If we think of a Tesla, we know that it is a car, and that all cars have wheels. This is what Hierarchical representation is; a way of representing knowledge in a tree-like structure.
 
 #### Frame representation
 
+If Hierarchical representation is a tree-like structure, a _Frame_ is an object (node) on that tree. These frames contain _slots_, which can house different pieces of information. To reiterate the structure, a _Frame_ forms a tree-like, hierarchical structure. Similar to an object-oriented language like Java, a frame can be thought of as a class, and the slots as the attributes of that class.
+
+> Scenarios: a complex frame that can unfold in time
+
+| Slot       | Value  | Default Value |
+| ---------- | ------ | ------------- |
+| Name       | Anakin | -             |
+| Is-A       | Jedi   | -             |
+| Lightsaber | Red    | Blue          |
+
 ### Procedural Representation
 
+> Representing knowledge by a list of actions that occur when a specific condition is met
+
+If you have ever written logic in programming, you have used procedural representation. Procedural representation is not exclusive to programmers however, if you have followed a recipe or helped determine when a family member is sick, you have used procedural representation.
+
+Put simply, if-then statements allow us to draw conclusions. As an example:
+
+_IF_ the lightsaber is red, _THEN_ the person is a Sith.
+
 ### Logic Representation
+
+> A way to represent human knowledge in a universal way
+
+#### Predicate Logic
+
+Predicate logic is a mathematical way of representing knowledge. However, it is too complex to be computable, because of this a subset is commonly used instead. Some examples include _Horn_ or _Prolog_.
+
+#### Descriptive Logic
+
+Descriptive logic is comprised of a family of logic systems that represent and reason the hierarchical structure of knowledge. This is a more computable form of logic. An example of this is _Semantic Web_.
 
 ## Expert Systems
 
