@@ -29,8 +29,6 @@ jobs:
           PUBLIC_STRAVA_ATHLETE_ID: ${{ secrets.PUBLIC_STRAVA_ATHLETE_ID }}
         run: yarn build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+      - name: Trigger Vercel deployment
+        run: |
+          curl -X POST "${{ secrets.VERCEL_DEPLOY_HOOK_URL }}"
