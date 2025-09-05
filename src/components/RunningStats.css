@@ -1,0 +1,12 @@
+.running-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgb(205, 108, 160);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.run-icon {
+  font-size: 1rem;
+}

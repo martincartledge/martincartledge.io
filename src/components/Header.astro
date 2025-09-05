@@ -2,6 +2,8 @@
 import { LOGO_IMAGE, SITE } from "@config";
 import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
+import RunningStats from "./RunningStats";
+import { getRunningTotals } from "@utils/getStravaData";
 
 import logoPNG from "/assets/logo.png";
 import logoSVG from "/assets/logo.svg";
@@ -11,6 +13,7 @@ export interface Props {
 }
 
 const { activeNav } = Astro.props;
+const runningStats = await getRunningTotals();
 ---
 
 <header>
@@ -27,7 +30,10 @@ const { activeNav } = Astro.props;
               height={LOGO_IMAGE.height}
             />
           ) : (
-            SITE.title
+            <div class="title-container">
+              <span>{SITE.title}</span>
+              <RunningStats stats={runningStats} client:load />
+            </div>
           )
         }
       </a>
@@ -117,6 +123,11 @@ const { activeNav } = Astro.props;
   }
   .logo {
     @apply absolute py-1 text-xl font-semibold sm:static sm:text-2xl;
+  }
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
   }
   .hamburger-menu {
     @apply self-end p-2 sm:hidden;

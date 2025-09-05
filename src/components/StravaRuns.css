@@ -1,0 +1,60 @@
+.runs-container {
+  margin: 2rem 0;
+}
+
+.runs-container h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(234, 237, 243);
+  margin: 0 0 1.5rem 0;
+}
+
+.runs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.run-item {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(205, 108, 160, 0.2);
+}
+
+.run-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.run-date {
+  color: rgb(205, 108, 160);
+  font-size: 0.875rem;
+  min-width: 60px;
+}
+
+.run-details {
+  flex: 1;
+}
+
+.run-name {
+  display: block;
+  color: rgb(234, 237, 243);
+  margin-bottom: 0.25rem;
+}
+
+.run-stats {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: rgb(234, 237, 243);
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .run-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
