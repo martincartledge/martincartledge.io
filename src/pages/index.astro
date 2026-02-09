@@ -39,15 +39,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           ></path><circle cx="6" cy="18" r="2"></circle>
         </svg>
       </a>
-      {
-        // only display if at least one social link is enabled
-        socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
       <LinkButton
         href="https://martincartledge.substack.com/"
         className="link-button"
@@ -60,33 +51,13 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
     <Hr />
 
-    {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured">
-            <h2>Featured</h2>
-            <ul>
-              {featuredPosts.map(({ data }) => (
-                <Card
-                  href={`/posts/${slugify(data)}`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
-            </ul>
-          </section>
-          <Hr />
-        </>
-      )
-    }
-
     <section id="recent-posts">
       <h2>Recent Posts</h2>
       <ul>
         {
           sortedPosts.map(
             ({ data }, index) =>
-              index < 4 && (
+              index < 10 && (
                 <Card
                   href={`/posts/${slugify(data)}`}
                   frontmatter={data}
