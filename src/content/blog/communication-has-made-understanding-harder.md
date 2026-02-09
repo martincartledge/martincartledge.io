@@ -11,7 +11,7 @@ description: Is technology hijacking our ability to understand each other?
 
 ![telephones](https://i.imgur.com/4PLqzxY.jpeg)
 
-> What we create with our words, before all else, if ourselves. The voice of consciousness that’s forever talking inside our head - that weird hybrid of monologue and dialogue that makes speaker and listener one - is the sculptor of the self. - Nicholas Carr
+> What we create with our words, before all else, is ourselves. The voice of consciousness that’s forever talking inside our head - that weird hybrid of monologue and dialogue that makes speaker and listener one - is the sculptor of the self. - Nicholas Carr
 
 With every generation, there are overlaps in experiences that form bonds within that generation or age group. I was born in 1990. I remember having a “home” phone, I remember not having internet, and I remember having to wait until the next school day to ask my friends about the latest Nintendo 64 game. It’s funny, when you are in the midst of a technological age, you rarely look around and notice what you take for granted, and what you might not.
 
