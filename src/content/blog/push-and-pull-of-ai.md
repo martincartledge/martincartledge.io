@@ -33,7 +33,7 @@ Give these tools pushback. Give it context. Be direct and give it guidelines. A 
 
 Okay, but you are not writing complex algorithms or tricky business logic, now is the time to pull the agent. The agent is your ally in this case. It can free up brain power and save time in your day. Set clean parameters and expectations, offer similar patterns to follow, and let it get you there. It won't always get you 100%, but it will get you close.
 
-Like anything, these things take time. There are interactions. Feedback loops.
+Like anything, these things take time. There are iterations. Feedback loops.
 
 We need to uphold a sense of pride and ownership in our code. In a way, it is an extension of who we are as people. It's how we offer direct value to the company we work for. We should be proud of that. Not just for the company's sake, but for our own craftsmanship.
 
