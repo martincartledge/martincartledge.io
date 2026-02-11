@@ -27,7 +27,7 @@ I opened up the webpage and off I went. Here is my journey.
 
 By looking at the length of the post, I felt, **there has to be more to this, _right?_** Surely a coding agent was much more involved than what I was seeing. I soon discovered that was not the case.
 
-In the following sections I will go over my experience at a high level - do not expect a mirco view of this process, Thorsten does a great job of that! This post is mainly meant to serve as my overall experience and takeaways after building an agent.
+In the following sections I will go over my experience at a high level - do not expect a micro view of this process, Thorsten does a great job of that! This post is mainly meant to serve as my overall experience and takeaways after building an agent.
 
 ## Building GoldenEye
 
@@ -45,7 +45,7 @@ Once my key was wired up along with the `run` function, I was able to run Claude
 
 Simply creating a wrapper application that can run a LLM locally is cool on its own, but to create a proper coding agent, this application needed to do a few standard things: reading files within a working directory, listing files within that directory, and possibly the most important, _editing_ files within a working directory.
 
-This phase of the tutorial melted my brain a little bit, but after adding the respective types and executable functions, I found that these actions followed similar paths: they needed a strict schema to delare the precise input and output, they needed to marshal and unmarshal JSON (essentially packing and unpacking JSON in the application), and they needed to register their tool's namespace (read, write, list) in the main executable function in the go program.
+This phase of the tutorial melted my brain a little bit, but after adding the respective types and executable functions, I found that these actions followed similar paths: they needed a strict schema to declare the precise input and output, they needed to marshal and unmarshal JSON (essentially packing and unpacking JSON in the application), and they needed to register their tool's namespace (read, write, list) in the main executable function in the go program.
 
 #### Listing and reading
 
@@ -57,7 +57,7 @@ This phase of the tutorial melted my brain a little bit, but after adding the re
 
 #### I am invincible!
 
-With these three action pillars intregrated, GoldenEye could perform similarly to the agent I use at work and at home!
+With these three action pillars integrated, GoldenEye could perform similarly to the agent I use at work and at home!
 
 I still feel like I need to process this piece a bit more. There is so much happening, but at the same time, little happening?
 
@@ -69,7 +69,7 @@ This experience reinforced something crucial: **context is KING**. The tool cont
 
 More importantly, it demystified what agents actually are. The act of wiring up a model and running it against your code on a local machine is straightforward. What separates companies in this space isn't some secret sauce in the agent architecture—**it's the presentation and the model itself.**
 
-It's how context is handled throughout an ecosystem. It's keeping input and output performance at the tip of highend for the user.
+It's how context is handled throughout an ecosystem. It's keeping input and output performance at the tip of high-end for the user.
 
 Companies can shine if they provide a sleek, intuitive UI and a performative, relevant, and dense model pool for their consumers. The agent loop? That's almost a solved problem. The real differentiator is the experience and the intelligence of the underlying model.
 
