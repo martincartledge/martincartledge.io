@@ -2,7 +2,7 @@
 author: Martin Cartledge
 pubDatetime: 2026-02-11T20:00:00.169Z
 title: Building My First AI Agent
-ogImage: ""
+ogImage: "https://i.imgur.com/5r8Wuc2.jpg"
 tags:
   - artificial intelligence
   - go
