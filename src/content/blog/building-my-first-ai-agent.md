@@ -1,107 +1,84 @@
 ---
 author: Martin Cartledge
-pubDatetime: 2026-01-20T10:00:00.169Z
+pubDatetime: 2026-02-11T20:00:00.169Z
 title: Building My First AI Agent
 ogImage: ""
 tags:
   - artificial intelligence
   - go
 featured: true
-draft: true
+draft: false
 description: My experience building a code-editing agent using the Anthropic API
 ---
 
-![building-my-first-ai-agent-photo](YOUR_IMAGE_URL_HERE)
+![building-my-first-ai-agent-goldeneye](https://i.imgur.com/LMkETwt.png)
 
-## Introduction
+AI agents have never been more prominent in today's technology sector, and I think their momentum will not be slowing down anytime soon. They have become an integral piece in the workflow of technology knowledge workers across the globe, and they have done so in a matter of several months.
 
-[Opening paragraph - set the scene. What prompted you to build an agent? What were your initial thoughts about how complex this would be?]
+But how do these work? If you have used any of the leading agents today, you might have come to the conclusion that they share strengths and pitfalls alike.
 
-## What is an Agent?
+I recently came across a long-time favorite writer of mine in the technology space, [Thorsten Ball's article](https://ampcode.com/notes/how-to-build-an-agent) in which he writes a roadmap that leads you to creating your own AI agent.
 
-[Brief explanation of what an agent is and how it differs from a simple LLM API call. The key insight from the tutorial: "an LLM, a loop, and enough tokens"]
+I jumped at this tutorial for many reasons: I want to expand my knowledge of these tools, I don't get to use Go in my 9-5 but love the language mechanics, and I knew Thorsten is a source I can trust. He has a great way of explaining dense, archaic concepts simply.
 
-## Discovering the Tutorial
+I opened up the webpage and off I went. Here is my journey.
 
-[Talk about finding the ampcode tutorial. What drew you to it? Had you worked with Go before? Why did you want to try building an agent?]
+## Immediate Takeaway
 
-## Getting Started
+By looking at the length of the post, I felt, **there has to be more to this, _right?_** Surely a coding agent was much more involved than what I was seeing. I soon discovered that was not the case.
 
-[Your experience setting up the project. Did you have Go installed? Getting your Anthropic API key? Any initial hurdles?]
+In the following sections I will go over my experience at a high level - do not expect a mirco view of this process, Thorsten does a great job of that! This post is mainly meant to serve as my overall experience and takeaways after building an agent.
 
-### Building the Chat Loop
+## Building GoldenEye
 
-[Your experience implementing the basic conversation interface. What did you learn about how the Anthropic API works? How message history is maintained?]
+### The bedrock
 
-```go
-// Include a code snippet if relevant
-```
+After creating project files and the backbone of any Go project, **main.go**, I used the Anthropic SDK to create an `Agent` type and a `NewAgent` function that accepts a few parameters: an Anthropic Client and a `getUserMessage` function. This new type and function are wired up in the **main.go** file.
 
-### Implementing Tools
+Next, after adding my Anthropic API key, I created a `run` function that accepted a few parameters: `context` and a `conversation` array.
 
-[Walk through your experience implementing the three tools:]
+Once my key was wired up along with the `run` function, I was able to run Claude in my terminal—so cool! It greeted me with: `"Chat with Boris, slug head"` (a nod to the James Bond film _GoldenEye_, namely the N64 game, IYKYK).
 
-**read_file**
-[What was involved? How does the JSON schema work?]
+![setting-up-the-llm](https://i.imgur.com/l4YUrlu.gif)
 
-**list_files**
-[Your experience with this tool]
+### Reading, viewing, and editing
 
-**edit_file**
-[The most complex one - what was this like to implement?]
+Simply creating a wrapper application that can run a LLM locally is cool on its own, but to create a proper coding agent, this application needed to do a few standard things: reading files within a working directory, listing files within that directory, and possibly the most important, _editing_ files within a working directory.
 
-[What was surprising about how tools work with the Anthropic API? The way Claude requests tool use and processes results?]
+This phase of the tutorial melted my brain a little bit, but after adding the respective types and executable functions, I found that these actions followed similar paths: they needed a strict schema to delare the precise input and output, they needed to marshal and unmarshal JSON (essentially packing and unpacking JSON in the application), and they needed to register their tool's namespace (read, write, list) in the main executable function in the go program.
 
-## Seeing It Work
+#### Listing and reading
 
-[The first time you got the agent working - what did that feel like? Walk through a specific example of what you had it do. Did you try the FizzBuzz or ROT13 examples from the tutorial? Or something else?]
+![listing-and-viewing-files](https://i.imgur.com/W1DYV9y.gif)
 
-## Understanding the Tool Execution Cycle
+#### Editing
 
-[Explain how the cycle works from your perspective now that you've built it:
+![editing-files](https://i.imgur.com/PTyyLpN.gif)
 
-1. Claude analyzes the request
-2. Claude requests tool use
-3. Your code executes the tool
-4. Results go back to Claude
-5. Claude decides next steps
+#### I am invincible!
 
-What clicked for you when you saw this in action?]
+With these three action pillars intregrated, GoldenEye could perform similarly to the agent I use at work and at home!
+
+I still feel like I need to process this piece a bit more. There is so much happening, but at the same time, little happening?
+
+I give full credit to Thorsten due to this feeling. He showcases a simple path to getting an agent to work, showcases the patterns when integrating actions within an agent, and presents the final product in a no nonsense manner.
 
 ## What I Learned
 
-### About Building Agents
+This experience reinforced something crucial: **context is KING**. The tool continually showed that being as clear as possible with actions—like `read_file({path: "main.go"})`—only galvanized the emphasis on providing context to increase the chances the agent acts the way you want it to.
 
-[What did you learn about how agents actually work? Was it simpler or more complex than expected?]
+More importantly, it demystified what agents actually are. The act of wiring up a model and running it against your code on a local machine is straightforward. What separates companies in this space isn't some secret sauce in the agent architecture—**it's the presentation and the model itself.**
 
-### About the Anthropic API
-
-[Insights from working with the API directly. How does it handle tool calls? Message structure?]
-
-### About Go
-
-[If you learned anything new about Go during this process]
-
-## Challenges Along the Way
-
-[What parts were tricky? Did you run into any bugs? API errors? Logic issues? How did you debug and solve them?]
-
-## The "Aha" Moments
-
-[What surprised you most? What made you think differently about AI agents? Any misconceptions that were corrected?]
-
-## Final Thoughts
-
-[Reflect on the experience. The tutorial's claim that you only need ~300 lines - was that accurate? How does this change what you think is possible with AI?]
-
-[Would you recommend others try building an agent? What's your main takeaway from this experience?]
+Companies can shine if they provide a sleek, intuitive UI and a performative, relevant, and dense model pool for their consumers. The agent loop? That's almost a solved problem. The real differentiator is the experience and the intelligence of the underlying model.
 
 ## What's Next
 
-[What do you want to build now that you understand how agents work? Ideas for improvements to this agent or new agents to create?]
+Now that I understand how agents work at this level, I want to go deeper. The next layer of abstraction—**the models that power these agents**—is rich in mystery and vast in expansive knowledge. That's where I want to dive next.
+
+Building GoldenEye showed me what's possible with relatively little code. Now I want to understand what makes the intelligence behind it tick.
 
 ## Resources
 
-- [How to Build an Agent Tutorial](https://ampcode.com/how-to-build-an-agent)
+- [How to Build an Agent by Thorsten Ball](https://ampcode.com/notes/how-to-build-an-agent) - The tutorial that inspired this
 - [Anthropic API Documentation](https://docs.anthropic.com/)
-- [Your goldeneye repo - if you want to share it]
+- [GoldenEye repository](https://github.com/martincartledge/goldeneye) - My implementation
