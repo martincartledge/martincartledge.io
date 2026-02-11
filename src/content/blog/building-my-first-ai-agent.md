@@ -61,7 +61,7 @@ With these three action pillars integrated, GoldenEye could perform similarly to
 
 I still feel like I need to process this piece a bit more. There is so much happening, but at the same time, little happening?
 
-I give full credit to Thorsten due to this feeling. He showcases a simple path to getting an agent to work, showcases the patterns when integrating actions within an agent, and presents the final product in a no nonsense manner.
+I give full credit to Thorsten due to this feeling. He showcases a simple path to getting an agent to work, showcases the patterns when integrating actions within an agent, and presents the final product in a no-nonsense manner.
 
 ## What I Learned
 
