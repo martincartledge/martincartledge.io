@@ -17,7 +17,7 @@ AI agents have never been more prominent in today's technology sector, and I thi
 
 But how do these work? If you have used any of the leading agents today, you might have come to the conclusion that they share strengths and pitfalls alike.
 
-I recently came across a long-time favorite writer of mine in the technology space, [Thorsten Ball's article](https://ampcode.com/notes/how-to-build-an-agent) in which he writes a roadmap that leads you to creating your own AI agent.
+I recently came across an article by [Thorsten Ball](https://ampcode.com/notes/how-to-build-an-agent), a long-time favorite writer of mine, that provides a roadmap for building your own AI agent.
 
 I jumped at this tutorial for many reasons: I want to expand my knowledge of these tools, I don't get to use Go in my 9-5 but love the language mechanics, and I knew Thorsten is a source I can trust. He has a great way of explaining dense, archaic concepts simply.
 
