@@ -79,9 +79,9 @@ These days, I wake up at 5am.
 
 I run 3-4 times a week. Lift 3 times a week.
 
-I get it in before my two daughters wake up.
+I get up and get these things done before my family is up.
 
-I'm not perfect. Life as a full-time employee, husband, and father of two doesn't leave room for perfection.
+I'm not perfect. Life as a husband and a father with a full time job doesn't leave room for perfection.
 
 But I've learned that consistency matters more than perfection. If you fall off, you get back up.
 
