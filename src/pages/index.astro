@@ -23,11 +23,16 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Lexing Daily Life</h1>
-      <p>
-        Software engineer, writer, and coach helping developers build better
-        careers and healthier lives.
-      </p>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Lexing Daily Life</h1>
+          <p>
+            Software engineer, writer, and coach helping developers build better
+            careers and healthier lives.
+          </p>
+        </div>
+        <img src="/me.png" alt="Martin Cartledge" class="hero-image" />
+      </div>
     </section>
 
     <Hr />
@@ -133,11 +138,20 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   #hero {
     @apply pb-6 pt-8;
   }
+  .hero-content {
+    @apply flex flex-col-reverse items-center gap-6 sm:flex-row sm:justify-between;
+  }
+  .hero-text {
+    @apply flex-1;
+  }
   #hero h1 {
     @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
   }
   #hero p {
     @apply my-4 text-lg opacity-80;
+  }
+  .hero-image {
+    @apply h-32 w-32 rounded-full border-4 border-skin-accent object-cover shadow-lg sm:h-48 sm:w-48;
   }
 
   /* ===== CTA Cards ===== */

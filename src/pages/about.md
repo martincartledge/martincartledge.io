@@ -3,6 +3,8 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
+<img src="/me.png" alt="Martin Cartledge" class="rounded-lg w-48 h-48 object-cover mb-6" />
+
 Hello 👋, my name is Martin
 
 I am a dad, husband, and software engineer 👨👩👧 🐕🦮 💻
