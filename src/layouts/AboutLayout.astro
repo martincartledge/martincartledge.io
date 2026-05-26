@@ -13,10 +13,16 @@ export interface Props {
 }
 
 const { frontmatter } = Astro.props;
+let activeNav: "about" | "coaching" | "run-coaching" = "about";
+if (Astro.url.pathname.includes("/run-coaching")) {
+  activeNav = "run-coaching";
+} else if (Astro.url.pathname.includes("/coaching")) {
+  activeNav = "coaching";
+}
 ---
 
 <Layout title={`${frontmatter.title} | ${SITE.title}`}>
-  <Header activeNav="about" />
+  <Header activeNav={activeNav} />
   <Breadcrumbs />
   <main id="main-content">
     <section id="about" class="prose mb-28 max-w-3xl prose-img:border-0">

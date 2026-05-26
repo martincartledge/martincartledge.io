@@ -9,7 +9,13 @@ import logoPNG from "/assets/logo.png";
 import logoSVG from "/assets/logo.svg";
 
 export interface Props {
-  activeNav?: "posts" | "tags" | "about" | "search";
+  activeNav?:
+    | "posts"
+    | "tags"
+    | "about"
+    | "coaching"
+    | "run-coaching"
+    | "search";
 }
 
 const { activeNav } = Astro.props;
@@ -64,6 +70,22 @@ const runningStats = await getRunningTotals();
           <li>
             <a href="/about" class={activeNav === "about" ? "active" : ""}>
               About
+            </a>
+          </li>
+          <li>
+            <a
+              href="/coaching"
+              class={activeNav === "coaching" ? "active" : ""}
+            >
+              Tech Coaching
+            </a>
+          </li>
+          <li>
+            <a
+              href="/run-coaching"
+              class={activeNav === "run-coaching" ? "active" : ""}
+            >
+              Run Coaching
             </a>
           </li>
           <li>
