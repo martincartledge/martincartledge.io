@@ -24,6 +24,7 @@ const { href, className, ariaLabel, title, disabled = false } = Astro.props;
 
 <style>
   a {
-    @apply hover:text-skin-accent;
+    @apply inline-flex items-center font-medium transition-all;
+    @apply hover:translate-x-1;
   }
 </style>
