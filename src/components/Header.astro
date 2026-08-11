@@ -19,7 +19,14 @@ export interface Props {
 }
 
 const { activeNav } = Astro.props;
-const runningStats = await getRunningTotals();
+
+let runningStats = null;
+try {
+  runningStats = await getRunningTotals();
+} catch (error) {
+  console.warn("Failed to fetch Strava data:", error.message);
+  // Gracefully continue without Strava stats
+}
 ---
 
 <header>
@@ -38,7 +45,9 @@ const runningStats = await getRunningTotals();
           ) : (
             <div class="title-container">
               <span>{SITE.title}</span>
-              <RunningStats stats={runningStats} client:load />
+              {runningStats && (
+                <RunningStats stats={runningStats} client:load />
+              )}
             </div>
           )
         }

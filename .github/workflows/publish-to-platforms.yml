@@ -1,0 +1,138 @@
+name: Publish Blog Posts to Social Platforms
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/content/blog/**"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Get changed markdown files
+        id: changed-files
+        run: |
+          changed_files=$(git diff --name-only HEAD~1 HEAD | grep '^src/content/blog/.*\.md$' || echo "")
+          if [ -z "$changed_files" ]; then
+            echo "No blog posts changed"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changed files: $changed_files"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            # Get the first changed file
+            first_file=$(echo "$changed_files" | head -n 1)
+            echo "file=$first_file" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup Node.js
+        if: steps.changed-files.outputs.has_changes == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        if: steps.changed-files.outputs.has_changes == 'true'
+        run: npm ci
+
+      - name: Extract post metadata
+        if: steps.changed-files.outputs.has_changes == 'true'
+        id: metadata
+        run: |
+          file="${{ steps.changed-files.outputs.file }}"
+
+          # Extract title from frontmatter
+          title=$(grep -m 1 '^title:' "$file" | sed 's/title: *//' | tr -d '"')
+
+          # Extract description
+          description=$(grep -m 1 '^description:' "$file" | sed 's/description: *//' | tr -d '"')
+
+          # Generate URL slug
+          slug=$(basename "$file" .md)
+          url="https://martincartledge.io/posts/$slug"
+
+          # Extract content (skip frontmatter)
+          content=$(awk '/^---$/,/^---$/ {next} {print}' "$file" | head -c 1000)
+
+          echo "title=$title" >> $GITHUB_OUTPUT
+          echo "description=$description" >> $GITHUB_OUTPUT
+          echo "url=$url" >> $GITHUB_OUTPUT
+
+          # Save content to file for multiline
+          echo "$content" > /tmp/post_content.txt
+
+      - name: Publish to LinkedIn
+        if: steps.changed-files.outputs.has_changes == 'true'
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+        run: |
+          title="${{ steps.metadata.outputs.title }}"
+          description="${{ steps.metadata.outputs.description }}"
+          url="${{ steps.metadata.outputs.url }}"
+
+          # Create LinkedIn post via API
+          curl -X POST https://api.linkedin.com/v2/ugcPosts \
+            -H "Authorization: Bearer $LINKEDIN_ACCESS_TOKEN" \
+            -H "Content-Type: application/json" \
+            -H "X-Restli-Protocol-Version: 2.0.0" \
+            -d '{
+              "author": "'"$LINKEDIN_PERSON_URN"'",
+              "lifecycleState": "PUBLISHED",
+              "specificContent": {
+                "com.linkedin.ugc.ShareContent": {
+                  "shareCommentary": {
+                    "text": "📝 New blog post: '"$title"'\n\n'"$description"'\n\nRead more: '"$url"'"
+                  },
+                  "shareMediaCategory": "ARTICLE",
+                  "media": [
+                    {
+                      "status": "READY",
+                      "originalUrl": "'"$url"'"
+                    }
+                  ]
+                }
+              },
+              "visibility": {
+                "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+              }
+            }'
+
+      - name: Publish to Twitter/X (optional)
+        if: steps.changed-files.outputs.has_changes == 'true' && vars.ENABLE_TWITTER == 'true'
+        env:
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
+        run: |
+          title="${{ steps.metadata.outputs.title }}"
+          url="${{ steps.metadata.outputs.url }}"
+
+          # Install twitter API client
+          npm install -g twitter-api-v2
+
+          # Create tweet (max 280 chars)
+          tweet="📝 New post: $title\n\n$url"
+
+          # Note: This requires a Node.js script for actual implementation
+          echo "Would tweet: $tweet"
+
+      - name: Send webhook notification (optional)
+        if: steps.changed-files.outputs.has_changes == 'true' && secrets.WEBHOOK_URL != ''
+        run: |
+          curl -X POST "${{ secrets.WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "title": "${{ steps.metadata.outputs.title }}",
+              "url": "${{ steps.metadata.outputs.url }}",
+              "description": "${{ steps.metadata.outputs.description }}",
+              "event": "new_blog_post"
+            }'
