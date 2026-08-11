@@ -1,0 +1,287 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+const EDITOR_PASSWORD = import.meta.env.EDITOR_PASSWORD || "changeme123";
+---
+
+<Layout>
+  <div id="login-screen" style="display: none;">
+    <div
+      style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 1rem;"
+    >
+      <div
+        style="background: var(--color-card); padding: 2rem; border-radius: 8px; border: 1px solid var(--color-border); max-width: 400px; width: 100%;"
+      >
+        <h1 style="margin: 0 0 1.5rem 0; font-size: 1.5rem;">
+          🔒 Editor Login
+        </h1>
+        <input
+          type="password"
+          id="password-input"
+          placeholder="Enter password"
+          style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-size: 1rem; margin-bottom: 1rem; box-sizing: border-box; background: var(--color-fill);"
+        />
+        <button
+          id="login-btn"
+          style="width: 100%; padding: 0.75rem; background: var(--color-accent); color: white; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer;"
+        >
+          Login
+        </button>
+        <p id="error-msg" style="color: red; margin-top: 1rem; display: none;">
+          Incorrect password
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="editor-content" style="display: none;">
+    <Header />
+    <main id="main-content">
+      <section class="pb-6 pt-8">
+        <div class="mx-auto max-w-4xl">
+          <div class="mb-8 flex items-center justify-between">
+            <h1 class="text-3xl font-bold">Write New Post</h1>
+            <button
+              id="logout-btn"
+              class="cursor-pointer text-sm opacity-70 hover:opacity-100"
+              >Logout</button
+            >
+          </div>
+
+          <div class="space-y-6">
+            <div>
+              <label for="title" class="mb-2 block font-medium">Title</label>
+              <input
+                type="text"
+                id="title"
+                placeholder="Enter post title..."
+                class="w-full rounded border border-skin-line bg-skin-fill px-4 py-2 focus:border-skin-accent focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label for="description" class="mb-2 block font-medium"
+                >Description</label
+              >
+              <textarea
+                id="description"
+                rows="2"
+                placeholder="Brief description for SEO..."
+                class="w-full rounded border border-skin-line bg-skin-fill px-4 py-2 focus:border-skin-accent focus:outline-none"
+              ></textarea>
+            </div>
+
+            <div class="md:grid-cols-2 grid grid-cols-1 gap-4">
+              <div>
+                <label for="tags" class="mb-2 block font-medium"
+                  >Tags (comma-separated)</label
+                >
+                <input
+                  type="text"
+                  id="tags"
+                  placeholder="javascript, webdev"
+                  class="w-full rounded border border-skin-line bg-skin-fill px-4 py-2 focus:border-skin-accent focus:outline-none"
+                />
+              </div>
+              <div class="flex flex-col justify-center space-y-2">
+                <label class="flex items-center">
+                  <input type="checkbox" id="featured" class="mr-2" />
+                  <span>Featured Post</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" id="draft" checked class="mr-2" />
+                  <span>Save as Draft</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label for="content" class="mb-2 block font-medium"
+                >Content (Markdown)</label
+              >
+              <div class="md:grid-cols-2 grid grid-cols-1 gap-4">
+                <textarea
+                  id="content"
+                  rows="20"
+                  placeholder="Write your markdown content here..."
+                  class="w-full rounded border border-skin-line bg-skin-fill px-4 py-2 font-mono text-sm focus:border-skin-accent focus:outline-none"
+                ></textarea>
+                <div
+                  id="preview"
+                  class="prose max-w-none overflow-auto rounded border border-skin-line bg-skin-fill p-4 dark:prose-invert"
+                  style="max-height: 500px;"
+                >
+                  <p class="opacity-50">Preview will appear here...</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 rounded border border-skin-line bg-skin-card p-6">
+              <h3 class="mb-2 text-xl font-bold">Generated Markdown</h3>
+              <p class="mb-4 opacity-70">
+                Copy and save to <code class="rounded bg-skin-fill px-2 py-1"
+                  >src/content/blog/your-post.md</code>
+              </p>
+              <pre
+                id="markdown-output"
+                class="mb-4 overflow-auto rounded bg-skin-fill p-4 font-mono text-sm"
+                style="max-height: 300px;">
+              </pre>
+              <button
+                id="copy-btn"
+                class="btn-primary rounded bg-skin-accent px-4 py-2 text-skin-inverted hover:opacity-90"
+              >
+                Copy to Clipboard
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </div>
+</Layout>
+
+<script define:vars={{ EDITOR_PASSWORD }}>
+  // Check authentication on page load
+  const isAuthenticated = sessionStorage.getItem("editor_auth") === "true";
+  const loginScreen = document.getElementById("login-screen");
+  const editorContent = document.getElementById("editor-content");
+
+  if (isAuthenticated) {
+    loginScreen.style.display = "none";
+    editorContent.style.display = "block";
+  } else {
+    loginScreen.style.display = "block";
+    editorContent.style.display = "none";
+  }
+
+  // Login functionality
+  const passwordInput = document.getElementById("password-input");
+  const loginBtn = document.getElementById("login-btn");
+  const errorMsg = document.getElementById("error-msg");
+
+  function attemptLogin() {
+    if (passwordInput.value === EDITOR_PASSWORD) {
+      sessionStorage.setItem("editor_auth", "true");
+      loginScreen.style.display = "none";
+      editorContent.style.display = "block";
+      errorMsg.style.display = "none";
+    } else {
+      errorMsg.style.display = "block";
+    }
+  }
+
+  loginBtn.addEventListener("click", attemptLogin);
+  passwordInput.addEventListener("keypress", e => {
+    if (e.key === "Enter") attemptLogin();
+  });
+
+  // Logout functionality
+  const logoutBtn = document.getElementById("logout-btn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      sessionStorage.removeItem("editor_auth");
+      location.reload();
+    });
+  }
+</script>
+
+<script>
+  import { marked } from "marked";
+
+  // Wait for authentication before initializing editor
+  const checkAuth = setInterval(() => {
+    if (document.getElementById("editor-content").style.display === "block") {
+      clearInterval(checkAuth);
+      initializeEditor();
+    }
+  }, 100);
+
+  function initializeEditor() {
+    const titleInput = document.getElementById("title") as HTMLInputElement;
+    const descriptionInput = document.getElementById(
+      "description"
+    ) as HTMLTextAreaElement;
+    const tagsInput = document.getElementById("tags") as HTMLInputElement;
+    const contentInput = document.getElementById(
+      "content"
+    ) as HTMLTextAreaElement;
+    const featuredInput = document.getElementById(
+      "featured"
+    ) as HTMLInputElement;
+    const draftInput = document.getElementById("draft") as HTMLInputElement;
+    const previewPane = document.getElementById("preview") as HTMLDivElement;
+    const markdownOutput = document.getElementById(
+      "markdown-output"
+    ) as HTMLPreElement;
+    const copyBtn = document.getElementById("copy-btn") as HTMLButtonElement;
+
+    function generateMarkdown() {
+      const title = titleInput.value;
+      const description = descriptionInput.value;
+      const tags = tagsInput.value
+        .split(",")
+        .map(t => t.trim())
+        .filter(Boolean);
+      const content = contentInput.value;
+      const featured = featuredInput.checked;
+      const draft = draftInput.checked;
+      const now = new Date().toISOString();
+
+      return `---
+title: "${title}"
+description: "${description}"
+author: "Martin Cartledge"
+pubDatetime: ${now}
+featured: ${featured}
+draft: ${draft}
+tags:
+${tags.map(tag => `  - ${tag}`).join("\n")}
+---
+
+${content}`;
+    }
+
+    function updatePreview() {
+      const content = contentInput.value;
+      if (content.trim()) {
+        previewPane.innerHTML = marked.parse(content) as string;
+      } else {
+        previewPane.innerHTML =
+          '<p class="opacity-50">Preview will appear here...</p>';
+      }
+    }
+
+    function updateOutput() {
+      markdownOutput.textContent = generateMarkdown();
+    }
+
+    contentInput.addEventListener("input", () => {
+      updatePreview();
+      updateOutput();
+    });
+
+    titleInput.addEventListener("input", updateOutput);
+    descriptionInput.addEventListener("input", updateOutput);
+    tagsInput.addEventListener("input", updateOutput);
+    featuredInput.addEventListener("change", updateOutput);
+    draftInput.addEventListener("change", updateOutput);
+
+    copyBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(generateMarkdown());
+        copyBtn.textContent = "✓ Copied!";
+        setTimeout(() => {
+          copyBtn.textContent = "Copy to Clipboard";
+        }, 2000);
+      } catch (err) {
+        alert("Failed to copy");
+      }
+    });
+
+    updateOutput();
+  }
+</script>

@@ -1,0 +1,7 @@
+---
+// Clear the auth cookie
+Astro.cookies.delete("editor_auth", { path: "/" });
+
+// Redirect to editor (will show login form)
+return Astro.redirect("/editor");
+---

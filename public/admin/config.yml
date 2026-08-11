@@ -1,0 +1,61 @@
+backend:
+  name: github
+  repo: martincartledge/martincartledge.io # Replace with your actual GitHub username/repo
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+# Uncomment below to use with Vercel instead of Netlify
+# backend:
+#   name: github
+#   repo: martincartledge/martincartledge.io
+#   branch: main
+
+media_folder: "public/assets/images/posts"
+public_folder: "/assets/images/posts"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Author", name: "author", widget: "string", default: "Martin Cartledge" }
+      - { label: "Publish Date", name: "pubDatetime", widget: "datetime" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "list",
+          default: []
+        }
+      - {
+          label: "OG Image",
+          name: "ogImage",
+          widget: "string",
+          required: false,
+          hint: "URL or path to Open Graph image for social sharing"
+        }
+      - {
+          label: "Canonical URL",
+          name: "canonicalURL",
+          widget: "string",
+          required: false,
+          hint: "If this post was originally published elsewhere"
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "src/pages/about.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "../layouts/AboutLayout.astro" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
