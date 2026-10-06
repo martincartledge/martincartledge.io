@@ -19,24 +19,6 @@ export const LOGO_IMAGE = {
 
 export const SOCIALS: SocialObjects = [
   {
-    name: "Github",
-    href: "https://github.com/martincartledge",
-    linkTitle: ` ${SITE.title} on Github`,
-    active: true,
-  },
-  {
-    name: "Twitter",
-    href: "https://twitter.com/dadoftwo1990",
-    linkTitle: `${SITE.title} on Twitter`,
-    active: true,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://linkedin.com/in/martincartledge",
-    linkTitle: `${SITE.title} on LinkedIn`,
-    active: true,
-  },
-  {
     name: "Mail",
     href: "mailto:martin@hey.com",
     linkTitle: `Send an email to ${SITE.title}`,
