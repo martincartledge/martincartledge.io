@@ -1,8 +1,6 @@
 import type { APIRoute } from "astro";
 import axios from "axios";
 
-export const prerender = false;
-
 const STRAVA_CLIENT_ID = import.meta.env.PUBLIC_STRAVA_CLIENT_ID;
 const STRAVA_CLIENT_SECRET = import.meta.env.STRAVA_CLIENT_SECRET;
 const STRAVA_REFRESH_TOKEN = import.meta.env.STRAVA_REFRESH_TOKEN;
