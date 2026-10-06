@@ -8,12 +8,8 @@ const EDITOR_PASSWORD = import.meta.env.EDITOR_PASSWORD || "changeme123";
 
 <Layout>
   <div id="login-screen" style="display: none;">
-    <div
-      style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 1rem;"
-    >
-      <div
-        style="background: var(--color-card); padding: 2rem; border-radius: 8px; border: 1px solid var(--color-border); max-width: 400px; width: 100%;"
-      >
+    <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 1rem;">
+      <div style="background: var(--color-card); padding: 2rem; border-radius: 8px; border: 1px solid var(--color-border); max-width: 400px; width: 100%;">
         <h1 style="margin: 0 0 1.5rem 0; font-size: 1.5rem;">
           🔒 Editor Login
         </h1>
@@ -46,43 +42,46 @@ const EDITOR_PASSWORD = import.meta.env.EDITOR_PASSWORD || "changeme123";
             <button
               id="logout-btn"
               class="cursor-pointer text-sm opacity-70 hover:opacity-100"
-              >Logout</button
             >
+              Logout
+            </button>
           </div>
 
           <div class="space-y-6">
             <div>
-              <label for="title" class="mb-2 block font-medium">Title</label>
+              <label for="title" class="mb-2 block font-medium">
+                Title
+              </label>
               <input
                 type="text"
                 id="title"
                 placeholder="Enter post title..."
-                class="w-full rounded border border-skin-line bg-skin-fill px-4 py-2 focus:border-skin-accent focus:outline-none"
+                class="w-full rounded-sm border border-skin-line bg-skin-fill px-4 py-2 focus:border-skin-accent focus:outline-hidden"
               />
             </div>
 
             <div>
-              <label for="description" class="mb-2 block font-medium"
-                >Description</label
-              >
+              <label for="description" class="mb-2 block font-medium">
+                Description
+              </label>
               <textarea
                 id="description"
                 rows="2"
                 placeholder="Brief description for SEO..."
-                class="w-full rounded border border-skin-line bg-skin-fill px-4 py-2 focus:border-skin-accent focus:outline-none"
+                class="w-full rounded-sm border border-skin-line bg-skin-fill px-4 py-2 focus:border-skin-accent focus:outline-hidden"
               ></textarea>
             </div>
 
             <div class="md:grid-cols-2 grid grid-cols-1 gap-4">
               <div>
-                <label for="tags" class="mb-2 block font-medium"
-                  >Tags (comma-separated)</label
-                >
+                <label for="tags" class="mb-2 block font-medium">
+                  Tags (comma-separated)
+                </label>
                 <input
                   type="text"
                   id="tags"
                   placeholder="javascript, webdev"
-                  class="w-full rounded border border-skin-line bg-skin-fill px-4 py-2 focus:border-skin-accent focus:outline-none"
+                  class="w-full rounded-sm border border-skin-line bg-skin-fill px-4 py-2 focus:border-skin-accent focus:outline-hidden"
                 />
               </div>
               <div class="flex flex-col justify-center space-y-2">
@@ -98,19 +97,19 @@ const EDITOR_PASSWORD = import.meta.env.EDITOR_PASSWORD || "changeme123";
             </div>
 
             <div>
-              <label for="content" class="mb-2 block font-medium"
-                >Content (Markdown)</label
-              >
+              <label for="content" class="mb-2 block font-medium">
+                Content (Markdown)
+              </label>
               <div class="md:grid-cols-2 grid grid-cols-1 gap-4">
                 <textarea
                   id="content"
                   rows="20"
                   placeholder="Write your markdown content here..."
-                  class="w-full rounded border border-skin-line bg-skin-fill px-4 py-2 font-mono text-sm focus:border-skin-accent focus:outline-none"
+                  class="w-full rounded-sm border border-skin-line bg-skin-fill px-4 py-2 font-mono text-sm focus:border-skin-accent focus:outline-hidden"
                 ></textarea>
                 <div
                   id="preview"
-                  class="prose max-w-none overflow-auto rounded border border-skin-line bg-skin-fill p-4 dark:prose-invert"
+                  class="prose max-w-none overflow-auto rounded-sm border border-skin-line bg-skin-fill p-4 dark:prose-invert"
                   style="max-height: 500px;"
                 >
                   <p class="opacity-50">Preview will appear here...</p>
@@ -118,20 +117,23 @@ const EDITOR_PASSWORD = import.meta.env.EDITOR_PASSWORD || "changeme123";
               </div>
             </div>
 
-            <div class="mt-8 rounded border border-skin-line bg-skin-card p-6">
+            <div class="mt-8 rounded-sm border border-skin-line bg-skin-card p-6">
               <h3 class="mb-2 text-xl font-bold">Generated Markdown</h3>
               <p class="mb-4 opacity-70">
-                Copy and save to <code class="rounded bg-skin-fill px-2 py-1"
-                  >src/content/blog/your-post.md</code>
+                Copy and save to{" "}
+                <code class="rounded-sm bg-skin-fill px-2 py-1">
+                  src/content/blog/your-post.md
+                </code>
               </p>
               <pre
                 id="markdown-output"
-                class="mb-4 overflow-auto rounded bg-skin-fill p-4 font-mono text-sm"
-                style="max-height: 300px;">
+                class="mb-4 overflow-auto rounded-sm bg-skin-fill p-4 font-mono text-sm"
+                style="max-height: 300px;"
+              >
               </pre>
               <button
                 id="copy-btn"
-                class="btn-primary rounded bg-skin-accent px-4 py-2 text-skin-inverted hover:opacity-90"
+                class="btn-primary rounded-sm bg-skin-accent px-4 py-2 text-skin-fill hover:opacity-90"
               >
                 Copy to Clipboard
               </button>
@@ -194,7 +196,7 @@ const EDITOR_PASSWORD = import.meta.env.EDITOR_PASSWORD || "changeme123";
 
   // Wait for authentication before initializing editor
   const checkAuth = setInterval(() => {
-    if (document.getElementById("editor-content").style.display === "block") {
+    if (document.getElementById("editor-content")?.style.display === "block") {
       clearInterval(checkAuth);
       initializeEditor();
     }
