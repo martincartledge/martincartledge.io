@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/AboutLayout.astro
 title: "Run Coaching"
+coachingForm: run
 ---
 
 ## Break Free from the Desk
@@ -19,9 +20,11 @@ As developers and knowledge workers, we face unique challenges:
 
 ## I Get the Struggle
 
-The tight deadlines. The back-to-back meetings. The "just one more commit" that turns into three more hours at your desk. The guilt of choosing a run over shipping a feature. I understand these trade-offs because I've lived them.
+I've spent my career in tech, so I know how easy it is to let a run slide. There's always something that feels more urgent. I've skipped runs for work more times than I'd like to admit, and I've felt worse for it every time.
 
-Running isn't about adding more stress — it's about creating space for your mind and body to recover so you can show up better in your work and life.
+What I learned is that running doesn't compete with my work. It's what helps me do it well. The time on the road clears my head, and I come back to my desk better than I left it.
+
+I'm not a pro and I won't pretend to be. I'm someone who figured out how to make running fit around a real job, and I'd like to help you do the same.
 
 ## What I Offer
 
@@ -46,14 +49,6 @@ Running isn't about adding more stress — it's about creating space for your mi
 - **Stressed engineers** - Looking for a healthy outlet beyond screens
 - **Career-focused professionals** - Want fitness without sacrificing your goals
 - **Complete beginners** - Never been a "runner" but want to try
-
-## Let's Connect
-
-Ready to start training? Reach out to discuss your running goals.
-
-**Email:** [martin@hey.com](mailto:martin@hey.com?subject=Run%20Coaching%20Inquiry)
-
-**LinkedIn:** [linkedin.com/in/martincartledge](https://www.linkedin.com/in/martincartledge/)
 
 ---
 

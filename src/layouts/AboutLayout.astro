@@ -3,18 +3,22 @@ import { SITE } from "@config";
 import Breadcrumbs from "@components/Breadcrumbs.astro";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
+import CoachingForm from "@components/CoachingForm.astro";
 import Layout from "./Layout.astro";
 
 export interface Props {
   frontmatter: {
     title: string;
     description?: string;
+    coachingForm?: "career" | "run";
   };
 }
 
 const { frontmatter } = Astro.props;
-let activeNav: "about" | "coaching" | "run-coaching" = "about";
-if (Astro.url.pathname.includes("/run-coaching")) {
+let activeNav: "about" | "experience" | "coaching" | "run-coaching" = "about";
+if (Astro.url.pathname.includes("/experience")) {
+  activeNav = "experience";
+} else if (Astro.url.pathname.includes("/run-coaching")) {
   activeNav = "run-coaching";
 } else if (Astro.url.pathname.includes("/coaching")) {
   activeNav = "coaching";
@@ -28,6 +32,9 @@ if (Astro.url.pathname.includes("/run-coaching")) {
     <section id="about" class="prose mb-28 max-w-3xl prose-img:border-0">
       <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
       <slot />
+      {frontmatter.coachingForm && (
+        <CoachingForm type={frontmatter.coachingForm} />
+      )}
     </section>
   </main>
   <Footer />

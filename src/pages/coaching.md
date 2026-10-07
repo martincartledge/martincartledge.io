@@ -1,11 +1,12 @@
 ---
 layout: ../layouts/AboutLayout.astro
 title: "Career Coaching"
+coachingForm: career
 ---
 
 ## Accelerate Your Tech Career
 
-With 10 years of experience across multiple companies and a proven track record of mentoring high school students in STEM, I'm here to help you navigate your technology career journey.
+I've spent 10 years building software at several companies, and I've mentored people along the way, from high school students curious about STEM to engineers aiming for senior roles. If you're figuring out your next step in tech, I'd be glad to help.
 
 ## What I Offer
 
@@ -34,17 +35,9 @@ With 10 years of experience across multiple companies and a proven track record 
 
 ## My Background
 
-I've spent a decade building software across various companies, working on everything from API design to system architecture. I'm passionate about compilers, interpreters, and helping others grow in their careers.
+I've spent a decade building software, and I'm now a Senior Software Engineer on the machine learning team at OpenTable. I've also mentored engineers and students at different stages, including as a STEM career mentor at Peak to Peak Charter School. I've seen how much a clear plan and an honest conversation can change someone's direction. That's what I bring: practical experience, straight feedback, and a genuine interest in helping you grow.
 
-Check out my [LinkedIn](https://www.linkedin.com/in/martincartledge/) to learn more about my professional journey.
-
-## Let's Connect
-
-Interested in working together? Reach out to discuss how I can help you achieve your career goals.
-
-**Email:** [martin@hey.com](mailto:martin@hey.com?subject=Career%20Coaching%20Inquiry)
-
-**LinkedIn:** [linkedin.com/in/martincartledge](https://www.linkedin.com/in/martincartledge/)
+Learn more [about me](/about) or see my [work experience](/experience).
 
 ---
 

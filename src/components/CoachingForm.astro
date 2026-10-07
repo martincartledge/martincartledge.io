@@ -1,0 +1,34 @@
+---
+export interface Props {
+  type: "career" | "run";
+}
+
+const { type } = Astro.props;
+
+const copy = {
+  career: {
+    heading: "Ready to level up your tech career?",
+    button: "Email me about career coaching",
+    subject: "Career Coaching Inquiry",
+    body: "Hi Martin,\n\nI'm interested in career coaching. Here's a bit about me and what I'm hoping to work on:\n\n",
+  },
+  run: {
+    heading: "Ready to start running?",
+    button: "Email me about run coaching",
+    subject: "Run Coaching Inquiry",
+    body: "Hi Martin,\n\nI'm interested in run coaching. Here's a bit about me and my running goals:\n\n",
+  },
+}[type];
+
+const mailto = `mailto:martin@hey.com?subject=${encodeURIComponent(copy.subject)}&body=${encodeURIComponent(copy.body)}`;
+---
+
+<div class="not-prose my-8 rounded-lg border-2 border-skin-accent p-6 text-center">
+  <p class="mb-4 text-xl font-bold">{copy.heading}</p>
+  <a
+    href={mailto}
+    class="inline-block rounded bg-skin-accent px-6 py-3 font-semibold hover:opacity-90"
+  >
+    <span class="text-skin-fill">{copy.button} →</span>
+  </a>
+</div>

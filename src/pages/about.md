@@ -13,14 +13,12 @@ I have two Golden Retrievers 🦮🦮 💞
 
 I love to learn and to share what I learn 📚
 
-With 10 years of experience in software engineering, I'm passionate about helping others grow in their tech careers. I've mentored high school students in STEM and engineers at various career stages.
+## Background
 
-Interested in career coaching? [Learn more here](/coaching).
+I've spent a decade building software. Since 2021 I've been a Senior Software Engineer at OpenTable, and in March I moved to the machine learning team. Before that I worked on billing at Gogo, payments at Hypur, and data visualization at Arizona Instrument.
 
-## Interests
+I mostly work with React, TypeScript, Node, and Go. I write about what I'm learning, from distributed systems to AI agents.
 
-- Compilers
-- Interpreters
-- Go
-- API design
-- System design
+Outside of work, I'm a volunteer firefighter with Lefthand Fire and a STEM career mentor for high school students at Peak to Peak Charter School.
+
+See my full [work experience](/experience), or learn about my [career coaching](/coaching).
