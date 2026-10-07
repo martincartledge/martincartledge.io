@@ -15,9 +15,9 @@ I love to learn and to share what I learn 📚
 
 ## Background
 
-I've spent a decade building software. Since 2021 I've been a Senior Software Engineer at OpenTable, and in March I moved to the machine learning team. Before that I worked on billing at Gogo, payments at Hypur, and data visualization at Arizona Instrument.
+I've spent a decade building software. Since 2021 I've been a Senior Software Engineer at [OpenTable](https://www.opentable.com), and in March I moved to the machine learning team. Before that I worked on billing at [Gogo](https://www.gogoair.com), payments at [Hypur](https://www.hypur.com), and data visualization at [Arizona Instrument](https://www.azic.com).
 
-I mostly work with React, TypeScript, Node, and Go. I write about what I'm learning, from distributed systems to AI agents.
+These days I mostly work with Python, plus TypeScript, React, Node, and Go. I write about what I'm learning, from distributed systems to AI agents.
 
 Outside of work, I'm a volunteer firefighter with Lefthand Fire and a STEM career mentor for high school students at Peak to Peak Charter School.
 
